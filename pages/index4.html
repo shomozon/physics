@@ -8,13 +8,16 @@
 <body>
 <h1>重力による位置エネルギー</h1>
 <p>
-y座標の向きは関係ない。<br>
 \begin{eqnarray}
 \displaystyle \int_{t_{0}}^{t_{1}}m\boldsymbol{g}\cdot \boldsymbol{v} \ dt
 = \displaystyle \int_{t_{0}}^{t_{1}} mg\cdot v_{y} \ dt
 = mg \displaystyle \int_{t_{0}}^{t_{1}}v_{y} \ dt \\
-= mg \displaystyle \int_{t_{0}}^{t_{1}}\dfrac{d y}{dt} \ dt 
+= mg \displaystyle \int_{t_{0}}^{t_{1}}\dfrac{d y}{dt} \ dt
 = mg(y_{1}-y_{0})
-\end{eqnarray}
+\end{eqnarray}<br>
+重力は下向きにかかっているとして、y座標軸を上向きにとるか下向きにとるかを考えるが、
+式では速度との内積を考えるので物体が下向きに進んでいるか上向きに進んでいるかに着目する。
+下向きに進んでいる場合、内積正でy_1-y_0>0であり、仕事は正。仕事量を運動エネルギー側に移行
+すると負になり、下向きに進んでいるので位置エネルギーは減少していると解釈できる。
 </p>
 </body>
