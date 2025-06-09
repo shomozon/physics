@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <title>a</title>
+ <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<h1>静電気力による位置エネルギー</h1>
+<p>
+1.電荷Qをもつ動かない物体を原点として、電荷qをもつ物体について
+\begin{eqnarray} m\boldsymbol{a} = \dfrac{\boldsymbol{r}}{r}k\dfrac{qQ}{r^2} \\
+(\dfrac{\boldsymbol{r}}{r}k\dfrac{qQ}{r^2})\cdot \boldsymbol{v} =
+(\dfrac{d x}{dt}x + \dfrac{d y}{dt}y + \dfrac{d z}{dt}z)k\dfrac{qQ}{r^3}
+= \dfrac{d}{dt}(\dfrac{r^{2}}{2})k\dfrac{qQ}{r^3}
+= \dfrac{dr}{dt}k\dfrac{qQ}{r^{2}}
+= \dfrac{d}{dt}(-k\dfrac{qQ}{r})
+\end{eqnarray}<br>
+仕事率は力と速度の内積なので座標系の取り方によらない。よって複数の電荷が存在する場合でもエネルギー保存則は上記の式で成り立つ。<br><br>
+2.電荷Qの物体も動く場合
+\begin{eqnarray} && m\boldsymbol{a} = \boldsymbol{f}_{静電気力} \\
+&& M\boldsymbol{A} = -\boldsymbol{f}_{静電気力} \\ \\
+\boldsymbol{f}_{静電気力}\cdot \boldsymbol{v} + (-\boldsymbol{f}_{静電気力})\cdot \boldsymbol{V}
+= \boldsymbol{f}_{静電気力}\cdot (\boldsymbol{v}-\boldsymbol{V}) \\
+= k\dfrac{qQ}{|\boldsymbol{x}-\boldsymbol{X}|^{2}}\dfrac{\boldsymbol{x}-\boldsymbol{X}}{|\boldsymbol{x}-\boldsymbol{X}|}
+\cdot (\boldsymbol{v}-\boldsymbol{V})
+= \dfrac{d}{dt}(-k\dfrac{qQ}{|\boldsymbol{x}-\boldsymbol{X}|})
+\end{eqnarray}<br>
+エネルギー保存則は２物体間において成り立つ。<br><br>
+<a href="../index.html">戻る</a>
+</p>
+</body>
+</html>
