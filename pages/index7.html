@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <title>a</title>
+ <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<h1>補足</h1>
+<h4>1.円形斜面を下る運動</h4>
+<p>
+<img src="無題の図形描画-4.png", width="150"><br>
+質量mの物体が初速0で下る。<br>
+エネルギー保存則より、\( mgR = \dfrac{1}{2}mv^2 + mgR(1-\sin\theta)
+\Leftrightarrow v = \sqrt{2gR\sin\theta}\)
+\begin{eqnarray} \dfrac{d\theta}{dt} = \dfrac{v}{R} = \sqrt{\dfrac{2g\sin\theta}{R}}
+\Leftrightarrow\dfrac{1}{\sqrt{\sin\theta}}\dfrac{d\theta}{dt} = \sqrt{\dfrac{2g}{R}} \\
+\int \dfrac{1}{\sqrt{\sin\theta}}\dfrac{d\theta}{dt} dt = \int \sqrt{\dfrac{2g}{R}} dt
+\Leftrightarrow\int \dfrac{1}{\sqrt{\sin\theta}} d\theta = \sqrt{\dfrac{2g}{R}}t + C \ \ \ (Cは積分定数) \\
+\Leftrightarrow 2\sqrt{2\tan\dfrac{\theta}{2}} = \sqrt{\dfrac{2g}{R}}t \ \ \ (t = 0の時、\theta = 0でC=0) \\
+\Leftrightarrow \tan\dfrac{\theta}{2} = \dfrac{g}{4R}t^2
+\end{eqnarray}
+円運動をしているので、\( m\dfrac{v^2}{R} = N - mg\sin\theta \)<br>
+\begin{eqnarray} N = m\dfrac{v^2}{R} + mg\sin\theta= 3mg\sin\theta \\
+= 3mg\cdot 2\sin\dfrac{\theta}{2}\cos\dfrac{\theta}{2}
+= 6mg\sqrt{\dfrac{1}{(1+(\dfrac{gt^2}{4R})^2)(1+(\dfrac{4R}{gt^2})^2)}}
+\end{eqnarray}<br>
+<a href="../index.html">戻る</a>
+</p>
+</body>
+</html>
