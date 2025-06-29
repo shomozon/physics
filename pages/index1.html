@@ -10,13 +10,17 @@
 <img src="無題の図形描画-3.png" width="400">
 <p>上図は空間内にバネ定数kのバネがあり、バネの中点が黒丸である。静止系から見て中点の速度はv_0ベクトルで、中点に対して両端の質点はバネの伸びる方向へ互いに等しい速さvで動いている。また、中点の系において自然長の時の質
 点の位置を原点とする（静止系の座標軸と中点系の座標軸は平行）。２物体の力と速度の内積を考える。<br>
-\begin{eqnarray} 2k \boldsymbol{x} \cdot (\boldsymbol{v_{0}} + \boldsymbol{v}) + 2(-k \boldsymbol{x}) \cdot \{\boldsymbol{v_{0}} + (-\boldsymbol{v})\}
-= 4k \boldsymbol{x} \cdot \boldsymbol{v} 
-= 4kx \cdot v \\
-= 4k x \cdot \dfrac{d}{dt} = 4k\dfrac{d}{dt}(\dfrac{x^{2}}{2})
-= \dfrac{d}{dt}(2 k x^{2}) \\
-= \dfrac{d}{dt}(\dfrac{1}{2} k x^{2}_{バネの伸び})
+\begin{eqnarray} -2k \boldsymbol{x} \cdot (\boldsymbol{v_{0}} + \boldsymbol{v}) - 2(-k \boldsymbol{x}) \cdot \{\boldsymbol{v_{0}} + (-\boldsymbol{v})\}
+= -4k \boldsymbol{x} \cdot \boldsymbol{v}
+= -4kx \cdot v \\
+= -4k x \cdot \dfrac{dx}{dt} = -4k\dfrac{d}{dt}(\dfrac{x^{2}}{2})
+= -\dfrac{d}{dt}(2 k x^{2}) \\
+= -\dfrac{d}{dt}(\dfrac{1}{2} k x^{2}_{バネの伸び})
 \end{eqnarray}
+---<br>
+壁に繋がれたバネであれば、壁は動かないので運動エネルギーの変化がなく、
+バネに繋がった物体のみ着目すればよい。<br>
+---<br>
 <a href="../index.html">戻る</a>
 </p>
 </body>
