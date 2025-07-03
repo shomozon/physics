@@ -26,7 +26,42 @@
 \cdot (\boldsymbol{v}-\boldsymbol{V})
 = \dfrac{d}{dt}(-k\dfrac{qQ}{|\boldsymbol{x}-\boldsymbol{X}|})
 \end{eqnarray}<br>
-エネルギー保存則は２物体間において成り立つ。また、複数の物体間においても同様に成り立つ。<br><br>
+エネルギー保存則は２物体間において成り立つ。また、複数の物体間においても同様に成り立つ。
+</p>
+<h3>例</h3>
+<p>
+質量m、電荷qをもつ物体Aと質量M、電荷Qをもつ物体Bが同一直線上にある。無限遠から速さ\( v_{0} \)でAが静止したBに
+近づく。Bに到達しないとすると最も近づく距離はいくつか。<br>
+</p>
+<img src="2.1.png", width="350">
+<h4>1.</h4>
+<p>
+A→Bの方向にx軸をとると運動方程式は <br>
+\( ma = -k\dfrac{qQ}{r_{A→B}^2} \)<br>
+\( MA = k\dfrac{qQ}{r_{A→B}^2} \)
+\begin{eqnarray}
+MA = k\dfrac{qQ}{r_{A→B}^2} \Leftrightarrow
+M(a + A_{A→B}) = k\dfrac{qQ}{r_{A→B}^2} \\
+\Leftrightarrow MA_{A→B} = k\dfrac{qQ}{r_{A→B}^2} - \dfrac{M}{m}(-k\dfrac{qQ}{r_{A→B}^2}) \\
+\Leftrightarrow MA_{A→B} = k\dfrac{qQ}{r_{A→B}^2}(1 + \dfrac{M}{m}) \\
+\int_{\infty}^{r_{min}} MA_{A→B} \ dr_{A→B} = \int_{\infty}^{r_{min}} k\dfrac{qQ}{r_{A→B}^2}(1 + \dfrac{M}{m}) \ dr_{A→B} \\
+(左辺) = \int_{\infty}^{r_{min}} MA_{A→B} \dfrac{dr_{A→B}}{dt} \ dt
+= \int _{t(r_{A→B}=\infty)}^{t(r_{A→B}=r_{min})} M\dfrac{d}{dt}(\dfrac{v_{A→B}^2}{2}) \ dt
+= 0 - \dfrac{1}{2}Mv_{0}^2 \\
+(右辺) = \left[ kqQ(-\dfrac{1}{r_{A→B}})(1 + \dfrac{M}{m}) \right]_{\infty}^{r_{min}}
+= -\dfrac{kqQ}{r_{min}}(1 + \dfrac{M}{m}) + 0 \\
+r_{min} = \dfrac{2kqQ(m+M)}{mMv_{0}^2}
+\end{eqnarray}
+</p>
+<h4>2.</h4>
+<p>
+運動量保存則より<br>
+\( mv_{0} = mu + Mu \)<br>
+エネルギー保存則より<br>
+\( \dfrac{1}{2}mv_{0}^2 = \dfrac{1}{2}mu^2 + \dfrac{1}{2}Mu^2 +
+k\dfrac{qQ}{r_{min}} \)<br><br>
+\( r_{min} = \dfrac{2kqQ(m+M)}{mMv_{0}^2} \)
+</p><br>
 <a href="../index.html">戻る</a>
 </p>
 </body>

@@ -3,13 +3,35 @@
 <head>
  <meta charset="UTF-8">
  <title>a</title>
+ <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <h1>慣性系</h1>
-<p>１:どの物体の系が慣性系かは、慣性系に対して等速度運動をしているかを確かめる、または
-実験で測定して分かる。スケールとサイズによる。<br>
-２:慣性力により慣性系となった系ではその系の物理量を用いてエネルギー保存則が成り立つ。<br>
-</p><br>
+<p>慣性系とはその座標系での物理量を用いて運動方程式が成り立つ系のことで、
+慣性系かは実験で測定して分かる。<br><br>
+\( a = \dfrac{\Delta v}{\Delta t} \)<br><br>
+例:地上や太陽系
+</p><br><br>
+<h3>例.慣性力</h3>
+<img src="h.1.png" width="350">
+<p>
+台に対する初速\( \ v_{0} \ \)で質量mの球が摩擦のある台上を動く。台は加速度aで移動しており、
+球が台に対して静止するまでの台に対する移動距離を考える。
+動摩擦係数はμとする。<br><br>
+\( mA = -\mu N \)<br>
+\( N = mg \)<br><br>
+\( mA = -\mu N \Leftrightarrow mA = -\mu mg \)<br><br>
+\( \Leftrightarrow m(a + a_{台→球}) = -\mu mg \Leftrightarrow
+ma_{台→球} = -\mu mg - ma \)<br><br>
+台からみた時、球が運動方程式を満たすようにするには、
+慣性力maが加速度aの逆向きに働かなくてはならないことを示している。<br>
+つまり、実際に働いているだけの力のみの方程式\( \ ma_{台→球} = -\mu mg \ \)
+では実際に台から球の挙動を調べた時のものと矛盾すると思われる。
+なぜなら台の座標系は慣性系ではないからで、実際の力のみでは運動を示すことはできない。<br><br>
+台とともに動く座標系で考えると、\( \ \Delta E = \Delta W_{非保存力} \ \)より、<br><br>
+\( 0 - \dfrac{1}{2}mv_{0}^2 = -m(\mu g + a)\Delta x_{台→球} \)<br><br>
+\( \Delta x_{台→球} = \dfrac{v_{0}^2}{2(\mu g + a)} \)
+</p><br><br>
 <a href="../index.html">戻る</a>
 </body>
 </html>
