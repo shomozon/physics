@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <title>a</title>
+ <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<h1>剛体</h1>
+<h2>運動方程式</h2>
+<p>
+以下平面的な剛体を考える。剛体を質点の集まりとみなす。剛体の内力は万有引力や接触力などの質点同士の相互的な力で、
+質点の運動方程式を足し合わせると内力は消える。<br><br>
+\( \sum m_{i}\boldsymbol a_{i} = \boldsymbol f_{外力} \)<br><br>
+また、剛体の質量をMとすると<br><br>
+\( \sum m_{i}\boldsymbol a_{i} = \boldsymbol f_{外力}
+\Leftrightarrow M\sum \dfrac{m_{i}\boldsymbol a_{i}}{M} = \boldsymbol f_{外力}
+\Leftrightarrow M\boldsymbol a_{重心} = \boldsymbol f_{外力}\)
+</p>
+<h2>重力による位置エネルギー</h2>
+<p>
+基準面からの高さについて、<br><br>
+\( \sum m_{i}g h_{i} = Mg\sum \dfrac{m{i}h_{i}}{M}
+= Mgh_{重心}\)
+</p>
+<h2>運動エネルギー</h2>
+<p>
+回転も含めた剛体の系上の任意の点と剛体上の質点との距離は変わらないので、剛体の運動は重心の運動と重心周りの剛体の回転によるものとみれる。<br><br>
+\begin{eqnarray} K = \sum \dfrac{1}{2}m_{i}|\boldsymbol v_{g} + \boldsymbol v_{g→i}|^2
+= \dfrac{1}{2}\sum m_{i}(|\boldsymbol v_{g}|^2 + 2 \boldsymbol v_{g} \cdot
+\boldsymbol v_{g→i} + |\boldsymbol v_{g→i}|^2) \\ \\
+\sum m_{i}|\boldsymbol v_{g}|^2 = |\boldsymbol v_{g}|^2\sum m_{i} = M|\boldsymbol v_{g}|^2 \\ \\
+\sum m_{i}\boldsymbol v_{g} \cdot \boldsymbol v_{g→i} =
+M\sum \dfrac{m_{i}\boldsymbol v_{g} \cdot \boldsymbol v_{g→i}}{M}
+= M\sum \dfrac{m_{i}\boldsymbol v_{g→i}}{M} \cdot \boldsymbol v_{g}
+= M\sum \boldsymbol v_{g→g} \cdot \boldsymbol v_{g}
+= 0 \\ \\
+\sum m_{i}|\boldsymbol v_{g→i}|^2 = \sum m_{i}(r_{g→i}\omega)^2
+= \omega ^2 \sum m_{i}r_{g→i}^2 \\ \\
+K = \dfrac{1}{2}Mv_{g}^2 + \dfrac{\omega ^2}{2} \sum m_{i}r_{g→i}^2
+\end{eqnarray}
+</p>
+<h2>仕事</h2>
+<p>
+剛体に対して力が加わる時、加わった質点に対して力が仕事をしていなければ、その力のした仕事は０。<br><br>
+剛体の内力の仕事では、任意の２質点\( A_{i}とA_{j} \)間の相互的な力の仕事は、
+\( A_{i}とA_{j}の中点M_{ij} \)に関する運動において考える。<br>
+\( A_{i}とA_{j}は中点M_{ij} \)に対して回転運動をする。<br><br>
+\begin{eqnarray}
+P_{ij} &&= (\boldsymbol v_{m} + \boldsymbol v_{m→i})\cdot \boldsymbol f_{ij}
++ (\boldsymbol v_{m} + \boldsymbol v_{m→j})\cdot (-\boldsymbol f_{ij}) \\
+&&= (\boldsymbol v_{m→j} - \boldsymbol v_{m→j})\cdot \boldsymbol f_{ij} \\
+&&= 0 \ \ \ \ \ (\because \boldsymbol v_{m→j}, \boldsymbol v_{m→j} \perp \boldsymbol f_{ij})
+\end{eqnarray}<br><br>
+つまり、剛体に関して\( \ \Delta K + \Delta U = W_{外力} \ \)が成り立つ。
+</p>
+<h2>モーメントの釣り合い</h2>
+<img src="名称未設定1.1.png" width="350">
+<p>
+半時計回りに角度をとる。極座標での運動方程式から
+\begin{eqnarray}
+\dfrac{1}{r_{i}}\dfrac{dL_{i}}{dt} = f_{i \ 動径に対して垂直}
+\Leftrightarrow \dfrac{dL_{i}}{dt} = f_{i \ 動径に対して垂直} \ r_{i} \\
+\Leftrightarrow \dfrac{dL_{i}}{dt} = f_{i}sin \phi_{i} \cdot r_{i} \\
+\Leftrightarrow \dfrac{dL_{i}}{dt} = f_{i \ 符合付き}r_{i \ 作用線と原点の距離}
+\end{eqnarray}
+\( \sum \dfrac{dL_{i}}{dt} = \sum f_{i}r_{i \ 作用線と原点の距離} \ \)において相互的内力は作用線
+が同じで原点からの距離が等しく、力は逆を向いているのでモーメントは０。<br>
+剛体の系上のある点が静止している時、その点を原点にとると上記の式から
+\begin{eqnarray}
+L_{i} = m_{i}r_{i}^2 \omega \ \ \ (\omega = \dfrac{d\theta}{dt})\\
+\sum \dfrac{dL_{i}}{dt} = \dfrac{d\omega}{dt} \sum m_{i}r_{i}^2 \\
+\dfrac{d\omega}{dt} \sum m_{i}r_{i}^2 = \sum f_{i \ \boldsymbol {符合付き外力}}r_{i \ 作用線と原点の距離}
+= モーメント和
+\end{eqnarray}
+\( 剛体のモーメント和 = 0 \ のとき、\ \dfrac{d\omega}{dt} = 0 \ で \)
+角速度一定。<br>
+剛体が静止している時、任意の点周りでモーメント和は０となる。
+<h4>重心のモーメント</h4>
+<p>
+剛体の系上の静止している点を原点に水平に座標軸をとる。重力は鉛直下向きに働くので、<br><br>
+\( \sum 重力のモーメント = \sum m_{i}g\cdot x_{i} = M\sum \dfrac{m_{i}g\cdot x_{i}}{M} = Mgx_{G} \)
+</p>
+<p>---------------</p>
+<h4>補足</h4>
+剛体の系上のある点Aが等速度運動している時、その点を原点とする座標系をとる（その座標系の座標軸は静止系の座標軸と平行）。<br>
+剛体のある質点Bについて、<br><br>
+\( \boldsymbol r_{A→B} = \boldsymbol r_{(静止系の原点→)B} - \boldsymbol v_{A}t - \boldsymbol r_{(静止系の原点→)A(t=0)}\) <br>
+\( \dfrac{d^2}{dt^2} \boldsymbol r_{A→B} = \dfrac{d^2}{dt^2} \boldsymbol r_{B} \) <br><br>
+また、極座標表示では<br>
+\( \boldsymbol a_{A→B} = (r\prime\prime _{A→B} - r_{A→B}(\dfrac{d\theta}{dt})^2)\boldsymbol{e}_{1} +
+(2r'_{A→B}\dfrac{d\theta}{dt} + r_{A→B}\dfrac{d^2\theta}{dt^2})\boldsymbol{e}_{2} \) <br>
+\( \boldsymbol a_{B} = \boldsymbol a_{A→B} \ \)より、\( m_{B}\boldsymbol a_{B} = \boldsymbol f
+\Leftrightarrow  m_{B}\boldsymbol a_{A→B} = \boldsymbol f\)<br><br>
+よって、BのAの系における角運動量について<br><br>
+\( \dfrac{dL_{A→B}}{dt} = f_{符合付き}r_{作用線と原点Aの距離} \)
+</p>
+<p>---------------</p>
+<h2>例.1</h2>
+<img src="無題の図形描画-5.png" height="350">
+<p>
+長さl、質量Mの一様な棒について、線密度\( \ \sigma = \dfrac{M}{l} \ \)で、静止した状態から最下点での角速度を求める。
+\begin{eqnarray}
+K = \dfrac{1}{2}Mv_{g}^2 + \dfrac{\omega ^2}{2} \sum m_{i}r_{g→i}^2 \\
+\sum m_{i}r_{g→i}^2 = 2\int_{0}^{\frac{l}{2}} \sigma r^2 dr
+= 2\sigma \int_{0}^{\frac{l}{2}} r^2 dr
+= 2\sigma \left[\dfrac{r^{3}}{3}\right]_{0}^{\frac{l}{2}}
+= \dfrac{Ml^2}{12}
+\end{eqnarray}
+支点において仕事は０なので、エネルギー保存則が成り立ち、かつ\( \ v_{g} = \dfrac{l\omega}{2} \ \)より、<br>
+\begin{eqnarray}
+Mgl = \dfrac{1}{2}M(\dfrac{l\omega}{2})^2 + \dfrac{\omega ^2}{2}\cdot
+\dfrac{Ml^2}{12} \\
+\omega = \sqrt{\dfrac{6g}{l}}
+\end{eqnarray}
+また、\( \omega(t = 0) = \omega_{0} \)の初期条件では角度θの時、エネルギー保存則から、
+\begin{eqnarray}
+Mg\dfrac{l}{2}(1 - \cos\theta) = \dfrac{Ml^2(\omega^2 - \omega_{0}^2)}{6} \\
+\Leftrightarrow \omega = \sqrt{\dfrac{3g(1 - \cos\theta)}{l} + \omega_{0}^2}
+\Leftrightarrow \dfrac{d\theta}{dt} = \sqrt{\dfrac{3g(1 - \cos\theta)}{l} + \omega_{0}^2} \\
+\theta(t = 0) = \frac{\pi}{2},\ \omega(t = 0) = 0 \ の時、\\
+\int \dfrac{1}{\sqrt{1 - \cos\theta}} d\theta = \sqrt{\dfrac{3g}{l}}t + C \ (Cは積分定数)
+\Leftrightarrow -\dfrac{1}{\sqrt{2}}\log \dfrac{1 + \cos\frac{\theta}{2}}{1 - \cos\frac{\theta}{2}}
+= \sqrt{\dfrac{3g}{l}}t + C \\
+\theta(t = 0) = \frac{\pi}{2} \ より、C = -\sqrt{2}\log(1 + \sqrt{2}) \\
+-\dfrac{1}{\sqrt{2}}\log \dfrac{1 + \cos\frac{\theta}{2}}{1 - \cos\frac{\theta}{2}}
+= \sqrt{\dfrac{3g}{l}}t - \sqrt{2}\log(1 + \sqrt{2})
+\Leftrightarrow \cos\dfrac{\theta}{2} = \dfrac{(1 + \sqrt{2})^2 e^{-\sqrt{\frac{6g}{l}}t}-1}
+{(1 + \sqrt{2})^2 e^{-\sqrt{\frac{6g}{l}}t}+1} \\
+\theta = \pi \ の時、T = \log (1 + \sqrt{2})\sqrt{\dfrac{2l}{3g}}
+\end{eqnarray}
+</p>
+<h2>剛体棒について</h2>
+<img src="c.1.png" height="150">
+<p>
+質量の無視できる剛体棒の先に質量mの球をつけ、他端を固定する。<br>
+剛体に働く外力はmg, NのみでNは仕事をせず、エネルギー保存則を満たしながら動く。<br>
+ここで\( \ \sum r_{g→i}m_{i}^2 = 0  \ \)より、\( \ K = \dfrac{1}{2}mv_{g}^2 \ \)で、
+\( K + U_{g} = 一定 \)
+</p>
+<img src="b.1.png" height="150">
+<p>
+また、球のみに着目すると、働く力はmg, Nのみ。上記のKは球の運動エネルギーで
+U_{g}は球の重力による位置エネルギーなので球の運動を記述している。球の運動はエネルギー保存則を
+満たしているのでNは仕事をせず棒方向に作用している。剛体の外力は重心の運動を決めるので、
+固定点のNも棒方向に作用している。
+</p>
+<h2>例.2</h2>
+<img src="f.1.png" width="250">
+<p>
+棒が釣り合って静止している時、重心も静止しているので<br><br>
+\( \boldsymbol N + \boldsymbol T + m\boldsymbol g = 0 \)<br><br>
+任意の点回りでモーメント和は0なので、Tの作用線とmgの作用線の交点回りにおいてモーメント和は0。
+Nの作用線はその交点を通る。
+</p><br><br>
+<a href="../../index.html">戻る</a><br><br>
+</body>
+</html>

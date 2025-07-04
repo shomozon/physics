@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <title>a</title>
+ <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<h2>惑星</h2>
+<h4>1.第一法則</h4>
+<p>
+\begin{eqnarray}
+定数 \ h = r^2\dfrac{d\theta}{dt} \ とする。\\
+m(\ddot{r} - r(\dfrac{d\theta}{dt})^2) = -G\dfrac{mM}{r^2} \\
+\ddot{r} - r(\dfrac{d\theta}{dt})^2 = -G\dfrac{M}{r^2} \\
+\ddot{r} - \dfrac{h^2}{r^3} = -G\dfrac{M}{r^2}  \\
+h = r^2\dfrac{d\theta}{dt} \Leftrightarrow
+h\dfrac{dt}{dr} = r^2\dfrac{d\theta}{dt}\dfrac{dt}{dr}
+\Leftrightarrow h\dfrac{dt}{dr} = r^2 \dfrac{d\theta}{dr}
+\Leftrightarrow \dfrac{dr}{dt} = \dfrac{h}{r^2}\dfrac{dr}{d\theta} \\
+\dfrac{h}{r^2}\dfrac{dr}{d\theta} = -h\dfrac{d}{d\theta}\left( \dfrac{1}{r} \right) \\
+\Leftrightarrow \dfrac{d^2r}{dt^2} = -h\dfrac{d}{dt}\dfrac{d}{d\theta}\left( \dfrac{1}{r} \right)
+\Leftrightarrow \dfrac{d^2r}{dt^2}\dfrac{dt}{d\theta} = -h\dfrac{dt}{d\theta}\dfrac{d}{dt}\dfrac{d}{d\theta}\left( \dfrac{1}{r} \right)
+\Leftrightarrow \dfrac{d^2r}{dt^2}\dfrac{dt}{d\theta} = -h\dfrac{d^2}{d\theta^2}\left( \dfrac{1}{r} \right) \\
+\Leftrightarrow \dfrac{d^2r}{dt^2} = -h\dfrac{d\theta}{dt}\dfrac{d^2}{d\theta^2}\left( \dfrac{1}{r} \right)
+\Leftrightarrow \dfrac{d^2r}{dt^2} = -\dfrac{h^2}{r^2}\dfrac{d^2}{d\theta^2}\left( \dfrac{1}{r} \right) \\
+\ddot{r} - \dfrac{h^2}{r^3} = -G\dfrac{M}{r^2} \Leftrightarrow
+-\dfrac{h^2}{r^2}\dfrac{d^2}{d\theta^2}\left( \dfrac{1}{r} \right) - \dfrac{h^2}{r^3} = -G\dfrac{M}{r^2}
+\Leftrightarrow -h^2\dfrac{d^2}{d\theta^2}\left( \dfrac{1}{r} \right) -\dfrac{h^2}{r} = -GM \\
+\Leftrightarrow h^2\dfrac{d^2}{d\theta^2}\left( \dfrac{1}{r} \right) + \dfrac{h^2}{r} = GM
+\Leftrightarrow \dfrac{d^2}{d\theta^2}\left( \dfrac{1}{r} \right) = -\dfrac{1}{r} + \dfrac{GM}{h^2} \\
+u' = \dfrac{1}{r} - \dfrac{GM}{h^2} \ とする。 \\
+\dfrac{d^2}{d\theta^2}\left( \dfrac{1}{r} \right) = -\dfrac{1}{r} + \dfrac{GM}{h^2}
+\Leftrightarrow \dfrac{d^2u'}{d\theta^2} = -u' \\
+\Leftrightarrow u' = A\cos (\theta - \theta_0) \\
+\Leftrightarrow \dfrac{1}{r} = A\cos (\theta - \theta_0) + \dfrac{GM}{h^2}
+\Leftrightarrow r = \dfrac{1}{\dfrac{GM}{h^2} + A\cos (\theta - \theta_0)} \\
+\Leftrightarrow r = \dfrac{\dfrac{h^2}{GM}}{1 + \dfrac{h^2A}{GM}\cos (\theta - \theta_0)}
+\end{eqnarray}
+</p><br><br>
+<a href="../../index.html">戻る</a><br><br>
+</body>
+</html>
